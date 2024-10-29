@@ -2,6 +2,7 @@
 
 void SickDog::Bark()
 {
+	Dog::Bark(); // Demarquage !
 	DISPLAY("BARRK.. BWERKKK/...", true);
 }
 

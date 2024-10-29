@@ -12,8 +12,10 @@ int main()
     SickDog _sickDog;
 
     _animal.Sleep();
-    _dog.Sleep();
-    _sickDog.Sleep();
+    _sickDog.Sleep(); // Masquage !
+
+    _dog.Bark(); 
+    _sickDog.Bark(); // Demasquagee !
 
     return EXIT_SUCCESS;
 }
