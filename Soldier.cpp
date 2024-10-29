@@ -99,6 +99,7 @@ void Soldier::SetCurrentWeapon(const u_int& _weaponIndex)
 
 void Soldier::Death(Soldier*& _attacker)
 {
+	DISPLAY("[INFO] " + GetName() + " est mort !", true);
 	_attacker->AddWeapon(DropWeapon());
 	delete this;
 }

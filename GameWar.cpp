@@ -30,7 +30,10 @@ void GameWar::LaunchGame()
 		}
 		DoAction(_choice, player, ennemy);
 		system("pause");
-		DoAction(RandomInt(4, 0), ennemy, player);
+		if (ennemy)
+		{
+			DoAction(RandomInt(4, 0), ennemy, player);
+		}
 	} while (player && ennemy);
 }
 

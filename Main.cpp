@@ -31,7 +31,7 @@ int main()
         new Weapon("Salimata", 100, 2, 10, 300)
     };
 
-    GameWar _game = GameWar("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 2, 2), _weapons, 1);
+    GameWar _game = GameWar("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 100, 2), _weapons, 1);
 	_game.LaunchGame();
     //delete _soldier;
     return EXIT_SUCCESS;
