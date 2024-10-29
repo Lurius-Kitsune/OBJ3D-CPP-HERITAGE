@@ -30,7 +30,7 @@ void GameWar::LaunchGame()
 		}
 		DoAction(_choice, player, ennemy);
 		system("pause");
-		DoAction(RandomInt(3, 0), ennemy, player);
+		DoAction(RandomInt(4, 0), ennemy, player);
 	} while (player && ennemy);
 }
 
@@ -84,7 +84,10 @@ void GameWar::DoAction(const u_int& _choice, Soldier*& _soldierTurn, Soldier*& _
 	switch (_choice)
 	{
 	case 0:
-		_soldierTurn->ShootWithWeapon(_target);
+		if (_soldierTurn->ShootWithWeapon(_target))
+		{
+			_target = nullptr;
+		}
 		break;
 	case 1:
 		DISPLAY("[Fuite]" + _soldierTurn->GetName() + " a fuit !", true);
