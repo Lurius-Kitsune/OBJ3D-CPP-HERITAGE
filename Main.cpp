@@ -17,7 +17,7 @@ int main()
     _dog.Bark(); 
     _sickDog.Bark(); // Demasquagee !
 
-    _animal.Introduce();
+    //_animal.Introduce();
     _dog.Introduce();
     _sickDog.Introduce();
 
