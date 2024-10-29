@@ -6,6 +6,7 @@ class Dog : public Animal // Heritage fait !
 
 
 public:
+	virtual void Eat() override;
 	void Bark();
 };
 

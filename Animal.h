@@ -7,7 +7,7 @@ class Animal
 	float life;
 
 public:
-	void Eat();
-	void Sleep();
+	virtual void Eat(); // Virtual signifie que la fonction existe sur les classe fille !
+	virtual void Sleep();
 };
 
