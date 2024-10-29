@@ -76,6 +76,7 @@ void Soldier::SetCurrentWeapon(const u_int& _weaponIndex)
 {
 	if (IsValidWeaponIndex(_weaponIndex))
 	{
+		Weapon* _tempWeapon = currentWeapon;
 		Weapon** _tempWeapons = new Weapon * [weaponsSize - 1];
 		bool _isSkipped = false;
 		for (u_int _i = 0; _i < weaponsSize; _i++)
@@ -92,6 +93,7 @@ void Soldier::SetCurrentWeapon(const u_int& _weaponIndex)
 		delete weapons;
 		weapons = _tempWeapons;
 		weaponsSize--;
+		AddWeapon(_tempWeapon);
 	}
 }
 

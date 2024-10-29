@@ -50,6 +50,7 @@ u_int GameWar::SelectPlayerAction()
 		"Fuir",
 		"Recharger",
 		"Jeter l'arme",
+		"Changer d'arme",
 		"Quitter"
 	};
 	int _choiceIndex = 0, _actionsSize = size(_actions);
@@ -79,6 +80,7 @@ void GameWar::SpawnEnnemy()
 
 void GameWar::DoAction(const u_int& _choice, Soldier*& _soldierTurn, Soldier*& _target)
 {
+	Weapon* _weapon;
 	switch (_choice)
 	{
 	case 0:
@@ -93,9 +95,32 @@ void GameWar::DoAction(const u_int& _choice, Soldier*& _soldierTurn, Soldier*& _
 		_soldierTurn->Reload();
 		break;
 	case 3:
-		if (_soldierTurn->DropWeapon())
+		_weapon = _soldierTurn->DropWeapon();
+		if (_weapon)
 		{
 			DISPLAY("OOPS J'AI GLISSER", true);
+			DISPLAY(_soldierTurn->GetName() + " a jeter son arme " + _weapon->GetName(), true);
+			_target->AddWeapon(_weapon);
+			DISPLAY(_target->GetName() + " à récuperer l'arme " + _weapon->GetName(), true);
+		}
+		break;
+	case 4:
+		if (_soldierTurn->GetWeaponsSize() >= 1)
+		{
+			if (_soldierTurn == player)
+			{
+				int _weaponChoice = 0;
+				PlayerChoice(_soldierTurn->GetWeaponsList(), _weaponChoice, _soldierTurn->GetWeaponsSize());
+				_soldierTurn->SetCurrentWeapon(_weaponChoice);
+			}
+			else
+			{
+				_soldierTurn->SetCurrentWeapon(RandomInt(_soldierTurn->GetWeaponsSize(), 0));
+			}
+		}
+		else
+		{
+			DISPLAY("Pas d'arme à changer pour " + _soldierTurn->GetName(), true);
 		}
 		break;
 	default:

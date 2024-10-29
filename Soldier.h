@@ -22,6 +22,21 @@ public:
 		return currentWeapon;
 	}
 
+	u_int GetWeaponsSize() const
+	{
+		return weaponsSize;
+	}
+
+	string* GetWeaponsList() const
+	{
+		string* _weaponsList = new string[weaponsSize];
+		for (u_int _i = 0; _i < weaponsSize; _i++)
+		{
+			_weaponsList[_i] = weapons[_i]->GetName();
+		}
+		return _weaponsList;
+	}
+
 	Soldier() = default;
 
 	Soldier(const string& _name, const int _life, Weapon* _currentWeapon);

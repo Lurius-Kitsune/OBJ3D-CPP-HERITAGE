@@ -26,7 +26,12 @@ int main()
     On considère que l'ennemi est vaincu quand il fuit ou meurt
     */
 
-    GameWar _game = GameWar("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 2, 2));
+    Weapon** _weapons = new Weapon * [1]
+    {
+        new Weapon("Salimata", 100, 2, 10, 300)
+    };
+
+    GameWar _game = GameWar("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 2, 2), _weapons, 1);
 	_game.LaunchGame();
     //delete _soldier;
     return EXIT_SUCCESS;
