@@ -1,12 +1,11 @@
 #include "Main.h"
-
+#include "GameWar.h"
 int main()
 {
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Detection de fuite de mémoire
 
     locale::global(locale("fr-FR")); // UTF8
     //ShapeExcercice();
-    return EXIT_SUCCESS;
 
     /// Mon jeu Thomas vs Marguerite Apocalypse
 
@@ -26,6 +25,12 @@ int main()
 
     On considère que l'ennemi est vaincu quand il fuit ou meurt
     */
+
+    Soldier* _soldier = new Soldier("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 2, 2));
+
+    DISPLAY(_soldier->ToString(), true);
+    delete _soldier;
+    return EXIT_SUCCESS;
 }
 
 void HeritageDecouvert()

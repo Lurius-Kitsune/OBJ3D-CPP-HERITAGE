@@ -109,10 +109,11 @@ Weapon* Soldier::DropWeapon()
 
 string Soldier::ToString() const
 {
+	const string _ammoShow = to_string(currentWeapon->GetCurrentAmmo()) + "/" + to_string(currentWeapon->GetMaxAmmo());
 	
 	return "[" + name + "] \n" +
-		GREEN + "HP : " + to_string(life) + RESET + "\n" +
-		"Weapon : " + currentWeapon->GetName() + " " + currentWeapon.;
+		GREEN + "\t[HP] " + to_string(life) + RESET + "\n" +
+		"\t[Weapon] " + currentWeapon->GetName() + " " + _ammoShow ;
 }
 
 
