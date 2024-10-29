@@ -1,5 +1,7 @@
 #pragma once
 #include "Macro.h"
+#include "Color.h"
+
 class Shape
 {
 protected:
@@ -10,8 +12,10 @@ public:
 	Shape(const string& _color);
 
 protected:
-	virtual int CalcArea() = 0;
-	virtual int CalcPerimeter() = 0;
-	virtual void Introduce();
+	virtual float CalcArea()const  = 0;
+	virtual float CalcPerimeter() const = 0;
+
+public:
+	void Introduce(const string& _name);
 };
 

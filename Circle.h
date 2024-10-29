@@ -1,14 +1,16 @@
 #pragma once
+#define _USE_MATH_DEFINES // for C++
 #include "Shape.h"
+#include <cmath>
+
 class Circle : public Shape
 {
-	u_int radius;
+	float radius;
 
 public:
-	Circle(const u_int& _radius, const string& _color);
+	Circle(const float _radius, const string& _color);
 public:
-	virtual int CalcArea();
-	virtual int CalcPerimeter();
-	virtual void Introduce();
+	virtual float CalcArea()const;
+	virtual float CalcPerimeter()const;
 };
 

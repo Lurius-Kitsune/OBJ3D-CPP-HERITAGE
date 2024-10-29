@@ -1,24 +1,18 @@
 #include "Rectangle.h"
 
-Rectangle::Rectangle(const u_int& _length, const u_int& _width, const string& _color)
+Rectangle::Rectangle(const float _length, const float _width, const string& _color)
 	: Shape(_color)
 {
 	length = _length;
 	width = _width;
 }
 
-int Rectangle::CalcArea()
+float Rectangle::CalcArea()const
 {
-	return length*width;
+	return length * width;
 }
 
-int Rectangle::CalcPerimeter()
+float Rectangle::CalcPerimeter()const
 {
 	return (length+width) * 2;
-}
-
-void Rectangle::Introduce()
-{
-	DISPLAY(color + "[Le rectangle]", true);
-	Shape::Introduce();
 }

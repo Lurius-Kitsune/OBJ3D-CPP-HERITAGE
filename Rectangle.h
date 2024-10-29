@@ -2,14 +2,13 @@
 #include "Shape.h"
 class Rectangle : public Shape
 {
-	u_int length;
-	u_int width;
+	float length;
+	float width;
 
 public:
-	Rectangle(const u_int& _length, const u_int& _width, const string& _color);
+	Rectangle(const float _length, const float _width, const string& _color);
 public:
-	virtual int CalcArea();
-	virtual int CalcPerimeter();
-	virtual void Introduce();
+	virtual float CalcArea()const;
+	virtual float CalcPerimeter()const;
 };
 

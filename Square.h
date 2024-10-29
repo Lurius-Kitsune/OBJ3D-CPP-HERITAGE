@@ -3,13 +3,12 @@
 
 class Square : public Shape
 {
-	u_int side;
+	float side;
 
 public :
-	Square(const u_int& _side, const string& _color);
+	Square(const float _side, const string& _color);
 public :
-	virtual int CalcArea();
-	virtual int CalcPerimeter();
-	virtual void Introduce();
+	virtual float CalcArea()const;
+	virtual float CalcPerimeter()const;
 };
 

@@ -1,22 +1,16 @@
 #include "Square.h"
 
-Square::Square(const u_int& _side, const string& _color) : Shape(_color)
+Square::Square(const float _side, const string& _color) : Shape(_color)
 {
     side = _side;
 }
 
-int Square::CalcArea()
+float Square::CalcArea()const
 {
     return side*side;
 }
 
-int Square::CalcPerimeter()
+float Square::CalcPerimeter()const
 {
     return side*4;
-}
-
-void Square::Introduce()
-{
-    DISPLAY(color + "[Le caré]", true);
-    Shape::Introduce();
 }

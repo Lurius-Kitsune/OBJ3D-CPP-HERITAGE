@@ -1,22 +1,16 @@
 #include "Circle.h"
 
-Circle::Circle(const u_int& _radius, const string& _color) : Shape(_color)
+Circle::Circle(const float _radius, const string& _color) : Shape(_color)
 {
 	radius = _radius;
 }
 
-int Circle::CalcArea()
+float Circle::CalcArea()const
 {
-	return 3.14*(radius*radius);
+	return M_PI *(radius*radius);
 }
 
-int Circle::CalcPerimeter()
+float Circle::CalcPerimeter()const
 {
-	return (radius*2)*3.14;
-}
-
-void Circle::Introduce()
-{
-	DISPLAY(color + "[Le cercle]", true);
-	Shape::Introduce();
+	return (radius*2)* M_PI;
 }
