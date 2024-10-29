@@ -14,6 +14,7 @@ public:
 public:
 	virtual void Introduce() override;
 	virtual void Eat() override;
+	virtual void Sleep() override;
 	virtual void Bark();
 };
 

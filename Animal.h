@@ -1,7 +1,7 @@
 #pragma once
 #include "Macro.h"
 
-class Animal
+class Animal // classe abstraite
 {
 	string name;
 
@@ -22,7 +22,7 @@ public:
 protected:
 	virtual void Introduce();
 public:
-	virtual void Eat(); // Virtual signifie que la fonction existe sur les classe fille !
-	virtual void Sleep();
+	virtual void Eat() = 0; // Virtual signifie que la fonction existe sur les classe fille !
+	virtual void Sleep() = 0;
 };
 

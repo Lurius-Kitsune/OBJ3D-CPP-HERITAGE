@@ -7,11 +7,11 @@ int main()
     locale::global(locale("")); // UTF8
 
 
-    Animal _animal;
+    //Animal _animal;
     Dog _dog;
     SickDog _sickDog;
 
-    _animal.Sleep();
+    //_animal.Sleep();
     _sickDog.Sleep(); // Masquage !
 
     _dog.Bark(); 

@@ -23,10 +23,10 @@ void Dog::Eat()
 	DISPLAY("MIAM MIAM croquette ..", true);
 }
 
-//void Dog::Sleep()
-//{
-//	DISPLAY("Time to mimir home zzzzz...", true);
-//}
+void Dog::Sleep()
+{
+	DISPLAY("Time to mimir home zzzzz...", true);
+}
 
 void Dog::Bark()
 {
