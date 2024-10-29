@@ -11,6 +11,17 @@ class Soldier
 
 
 public:
+
+	string GetName() const
+	{
+		return name;
+	}
+
+	Weapon* GetCurrentWeapon() const
+	{
+		return currentWeapon;
+	}
+
 	Soldier() = default;
 
 	Soldier(const string& _name, const int _life, Weapon* _currentWeapon);

@@ -32,12 +32,16 @@ Soldier::~Soldier()
 
 bool Soldier::ShootWithWeapon(Soldier*& _receiver)
 {
-	return _receiver->ReceiveDamage(this, currentWeapon->Shoot());
+	const u_int& _damage = currentWeapon ? currentWeapon->Shoot() : 1;
+	return _receiver->ReceiveDamage(this, _damage);
 }
 
 void Soldier::Reload()
 {
-	currentWeapon->Reload();
+	if(currentWeapon)
+	{ 
+		currentWeapon->Reload();
+	}
 }
 
 bool Soldier::ReceiveDamage(Soldier* _attacker, const float _damage)
