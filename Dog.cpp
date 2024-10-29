@@ -1,5 +1,11 @@
 #include "Dog.h"
 
+void Dog::Introduce()
+{
+	Animal::Introduce();
+	DISPLAY(barkPower, true);
+}
+
 void Dog::Eat()
 {
 	DISPLAY("MIAM MIAM croquette ..", true);
