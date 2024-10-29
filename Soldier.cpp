@@ -29,9 +29,15 @@ Soldier::~Soldier()
 }
 
 
+
 bool Soldier::ShootWithWeapon(Soldier*& _receiver)
 {
 	return _receiver->ReceiveDamage(this, currentWeapon->Shoot());
+}
+
+void Soldier::Reload()
+{
+	currentWeapon->Reload();
 }
 
 bool Soldier::ReceiveDamage(Soldier* _attacker, const float _damage)
@@ -93,6 +99,7 @@ void Soldier::Death(Soldier*& _attacker)
 
 Weapon* Soldier::RunAway()
 {
+	delete this;
 	return DropWeapon();
 }
 
@@ -109,11 +116,12 @@ Weapon* Soldier::DropWeapon()
 
 string Soldier::ToString() const
 {
-	const string _ammoShow = to_string(currentWeapon->GetCurrentAmmo()) + "/" + to_string(currentWeapon->GetMaxAmmo());
+
+	const string;
 	
 	return "[" + name + "] \n" +
 		GREEN + "\t[HP] " + to_string(life) + RESET + "\n" +
-		"\t[Weapon] " + currentWeapon->GetName() + " " + _ammoShow ;
+		currentWeapon->ToString() ;
 }
 
 

@@ -2,6 +2,7 @@
 #pragma once
 #include <iostream>
 #include <string>   
+#include <conio.h>
 #include "ConsolMacroColor.h"
 
 using namespace std;

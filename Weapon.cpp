@@ -23,23 +23,30 @@ Weapon::Weapon(const string& _name, const u_int& _maxAmmo, const u_int& _bulletP
 	maxMagazine = _maxMagazine;
 }
 
+string Weapon::ToString()
+{
+	return "\t[Weapon] " + (this ? GetName() + " " + to_string(GetCurrentAmmo() <= 0 ? 0 : GetCurrentAmmo()) + "/" + to_string(GetMaxAmmo())
+		: "NONE");
+}
+
 
 int Weapon::Shoot()
 {
-	if (currentAmmo <= 0)
+	if (currentAmmo > 0)
 	{
+		const u_int _ammoBefore = currentAmmo;
 		currentAmmo -= bulletPerShot;
-		return damagePerShot * (currentAmmo < bulletPerShot ? currentAmmo : bulletPerShot);
+		return damagePerShot * (_ammoBefore < bulletPerShot ? _ammoBefore : bulletPerShot);
 	}
 	return 0;
 }
 
 void Weapon::Reload()
 {
-	if (magazine <= 0)
+	if (magazine > 0)
 	{
 		const u_int& _ammoDiff = maxAmmo - currentAmmo;
-		if (_ammoDiff < magazine)
+		if (_ammoDiff >= magazine)
 		{
 			currentAmmo = magazine;
 			magazine = 0;

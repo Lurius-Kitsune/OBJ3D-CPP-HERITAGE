@@ -31,6 +31,7 @@ public:
 	Weapon(const string& _name, const u_int& _maxAmmo, const u_int& _bulletPerShot,
 		const u_int& _damagePerShot, const u_int& _maxMagazine);
 
+	string ToString();
 public:
 	virtual int Shoot();
 	virtual void Reload();

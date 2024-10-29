@@ -18,6 +18,7 @@ public:
 	~Soldier();
 public:
 	bool ShootWithWeapon(Soldier*& _receiver);
+	void Reload();
 	bool ReceiveDamage(Soldier* _attacker, const float _damage);
 	void AddWeapon(Weapon* _weapon);
 	void SetCurrentWeapon(const u_int& _weaponIndex);

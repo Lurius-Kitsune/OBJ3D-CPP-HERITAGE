@@ -14,9 +14,13 @@ public:
 	~GameWar();
 public: 
 	void LaunchGame();
+private:
+	void DisplayGameStatus();
 
-
-private: 
+	u_int SelectPlayerAction();
+	void PlayerChoice(const string* _choices, u_int& _choiceIndex, const u_int& _maxChoice);
 	void SpawnEnnemy();
+
+	void DoAction(const u_int& _choice, Soldier*& _soldierTurn, Soldier*& _target);
 };
 
