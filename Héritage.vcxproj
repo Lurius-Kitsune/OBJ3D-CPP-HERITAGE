@@ -130,23 +130,30 @@
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Dog.cpp" />
+    <ClCompile Include="GameWar.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="SickDog.cpp" />
+    <ClCompile Include="Soldier.cpp" />
     <ClCompile Include="Square.cpp" />
+    <ClCompile Include="Weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Circle.h" />
     <ClInclude Include="ConsolMacroColor.h" />
     <ClInclude Include="Dog.h" />
+    <ClInclude Include="GameWar.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Random.h" />
     <ClInclude Include="Rectangle.h" />
     <ClInclude Include="Shape.h" />
     <ClInclude Include="Macro.h" />
     <ClInclude Include="SickDog.h" />
+    <ClInclude Include="Soldier.h" />
     <ClInclude Include="Square.h" />
+    <ClInclude Include="Weapon.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

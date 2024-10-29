@@ -5,8 +5,27 @@ int main()
     _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Detection de fuite de mémoire
 
     locale::global(locale("fr-FR")); // UTF8
-    ShapeExcercice();
+    //ShapeExcercice();
     return EXIT_SUCCESS;
+
+    /// Mon jeu Thomas vs Marguerite Apocalypse
+
+    /*
+    - Une arme: tire, recharge, a des munition (si à cours, ont la jette si ont veut)
+    - Ont peut rammasser des munition quand on tue (augmente le magazine)
+    le magazine a un maximl (800 munition max); 
+    - Un soldat : à DES ARMES, peut ramasser des armes, fuir, recharger, 
+    - L'ia : fait des actinon aléatoire quand c'est à son tours, 
+     a des chance de loot une arme quand il fuit/meurt
+
+
+    Déroulement :
+
+    Tour par tour ? Choix de l'action, le tour prend fin quand tu tire, 
+    jette l'arme ou fuit.
+
+    On considère que l'ennemi est vaincu quand il fuit ou meurt
+    */
 }
 
 void HeritageDecouvert()
