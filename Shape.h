@@ -1,6 +1,5 @@
 #pragma once
 #include "Macro.h"
-#include "Color.h"
 
 class Shape
 {

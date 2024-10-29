@@ -71,9 +71,6 @@
     <ClInclude Include="Shape.h">
       <Filter>Excercice Shape</Filter>
     </ClInclude>
-    <ClInclude Include="Color.h">
-      <Filter>Excercice Shape</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Header Files</Filter>
     </ClInclude>

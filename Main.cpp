@@ -30,11 +30,18 @@ void HeritageDecouvert()
     delete _sickDog;
 }
 
+void TestShape(Shape* _shape)
+{
+    Square* _square = dynamic_cast<Square*>(_shape);
+    // Dynamic cast -> convertit classe poly en classe fille
+    if (_square)
+    {
+        _square->Bob();
+    }
+}
+
 void ShapeExcercice()
 {
-    const Color& _color = Color(465, 25, 32, 255);
-    DISPLAY(_color.ToString(), true);
-
     Square _square = Square(3.00f, PURPLE);
     Rectangle _rectangle = Rectangle(5.00f, 12.00f, YELLOW);
     Circle _circle = Circle(6.00f, RED);
@@ -59,12 +66,7 @@ void ShapeExcercice()
         const ShapeData& _shapeData = _shapesData[_i];
         _shapeData.shape->Introduce(_shapeData.name);
 
-        Square* _square = dynamic_cast<Square*>(_shapeData.shape);
-        // Dynamic cast -> convertit classe poly en classe fille
-        if (_square)
-        {
-
-        }
+        TestShape(_shapeData.shape);
 
         delete _shapeData.shape;
     }

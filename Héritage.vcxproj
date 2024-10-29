@@ -139,7 +139,6 @@
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="Circle.h" />
-    <ClInclude Include="Color.h" />
     <ClInclude Include="ConsolMacroColor.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Main.h" />
