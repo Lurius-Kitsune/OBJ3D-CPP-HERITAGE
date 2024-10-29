@@ -3,10 +3,10 @@
 
 class Dog : public Animal // Heritage fait !
 {
-
+	double barkPower;
 
 public:
 	virtual void Eat() override;
-	void Bark();
+	virtual void Bark();
 };
 

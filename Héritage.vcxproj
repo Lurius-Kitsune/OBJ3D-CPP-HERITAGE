@@ -129,13 +129,15 @@
   <ItemGroup>
     <ClCompile Include="Animal.cpp" />
     <ClCompile Include="Dog.cpp" />
-    <ClCompile Include="Héritage.cpp" />
+    <ClCompile Include="Main.cpp" />
+    <ClCompile Include="SickDog.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Animal.h" />
     <ClInclude Include="ConsolMacroColor.h" />
     <ClInclude Include="Dog.h" />
     <ClInclude Include="Macro.h" />
+    <ClInclude Include="SickDog.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
