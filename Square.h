@@ -10,5 +10,6 @@ public :
 public :
 	virtual float CalcArea()const;
 	virtual float CalcPerimeter()const;
+	void Bob() const;
 };
 

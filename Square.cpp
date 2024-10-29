@@ -14,3 +14,8 @@ float Square::CalcPerimeter()const
 {
     return side*4;
 }
+
+void Square::Bob() const
+{
+    DISPLAY("JE SUIS MAGUERITE", true)
+}

@@ -59,6 +59,13 @@ void ShapeExcercice()
         const ShapeData& _shapeData = _shapesData[_i];
         _shapeData.shape->Introduce(_shapeData.name);
 
+        Square* _square = dynamic_cast<Square*>(_shapeData.shape);
+        // Dynamic cast -> convertit classe poly en classe fille
+        if (_square)
+        {
+
+        }
+
         delete _shapeData.shape;
     }
 
