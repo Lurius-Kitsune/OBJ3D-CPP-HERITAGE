@@ -3,14 +3,14 @@
 
 class Animal // classe abstraite
 {
-	string name;
+	string* name;
 
 protected:
 	int pawsCount;
 	float life;
 
 public: 
-	string GetName() const
+	string* GetName() const
 	{
 		return name;
 	}
@@ -18,6 +18,7 @@ public:
 public:
 	Animal();
 	Animal(const string& _name, const int _pawsCount, const float _life);
+	virtual ~Animal();
 
 protected:
 	virtual void Introduce();

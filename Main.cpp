@@ -8,18 +8,22 @@ int main()
 
 
     //Animal _animal;
-    Dog _dog;
-    SickDog _sickDog;
+    Dog* _dog = new Dog("TrouDuc", 100.0f, 20.0);
+    SickDog* _sickDog = new SickDog("Deldu", 3, 100.0f, 20.0, "BOB");
 
     //_animal.Sleep();
-    _sickDog.Sleep(); // Masquage !
+    _sickDog->Sleep(); // Masquage !
 
-    _dog.Bark(); 
-    _sickDog.Bark(); // Demasquagee !
+    _dog->Bark();
+    _sickDog->Bark(); // Demasquagee !
 
     //_animal.Introduce();
-    _dog.Introduce();
-    _sickDog.Introduce();
+    _dog->Introduce();
+    _sickDog->Introduce();
+
+
+    delete _dog;
+    delete _sickDog;
 
     return EXIT_SUCCESS;
 }
