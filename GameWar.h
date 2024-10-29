@@ -11,7 +11,7 @@ public:
 	GameWar(const string& _name, const int _life, Weapon* _currentWeapon);
 	GameWar(const string& _name, const int _life, Weapon* _currentWeapon,
 		Weapon** _weapons, const u_int& _weaponsSize);
-
+	~GameWar();
 public: 
 	void LaunchGame();
 

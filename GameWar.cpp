@@ -12,14 +12,24 @@ GameWar::GameWar(const string& _name, const int _life, Weapon* _currentWeapon, W
 	ennemy = nullptr;
 }
 
+GameWar::~GameWar()
+{
+	delete player;
+	delete ennemy;
+}
+
 void GameWar::LaunchGame()
 {
 	SpawnEnnemy();
 	bool _wantToQuit = false;
 	do
 	{
-
-	} while (player || !_wantToQuit);
+		CLEAR_SCREEN;
+		DISPLAY(player->ToString(),true);
+		SPACE;
+		DISPLAY(ennemy->ToString(), true);
+		_wantToQuit = true;
+	} while (player && !_wantToQuit);
 }
 
 
