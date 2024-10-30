@@ -60,6 +60,9 @@
     <ClCompile Include="GameWar.cpp">
       <Filter>Excercice\Solider76</Filter>
     </ClCompile>
+    <ClCompile Include="Macro.cpp">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConsolMacroColor.h">

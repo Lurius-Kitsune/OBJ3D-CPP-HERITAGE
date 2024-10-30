@@ -1,5 +1,8 @@
 ﻿#pragma once
 
+#include "Random.h"
+
+
 // Une s�quence ANSI (ou code ANSI d'�chappement)
 // est une s�rie de caract�res sp�ciaux utilis�e
 // pour contr�ler la mise en forme du texte dans les terminaux compatibles.
@@ -105,3 +108,36 @@
 // x => Color code between 0 and 255
 #define COLOR(x) "\x1B[38;5;"<<x<<"m"
 #define BG_COLOR(x) "\x1B[48;5;"<<x<<"m"
+
+static string RainbowString(string _word, const u_int _wordSize)
+{
+	const string _rainbowTable[] =
+	{
+		WHITE,
+		DARK_RED,
+		RED ,
+		DARK_ORANGE ,
+		ORANGE,
+		DARK_YELLOW,
+		YELLOW,
+		LIME,
+		GREEN,
+		BLUE,
+		LIGHT_BLUE,
+		CYAN,
+		PINK,
+		MAGENTA,
+		PURPLE,
+		BROWN
+	};
+
+	const u_int _rainbowSize = size(_rainbowTable);
+	string _newWord = "";
+	for (u_int _i = 0; _i < _wordSize; _i++)
+	{
+		_newWord += _rainbowTable[RandomInt(_rainbowSize, 0)] + _word[_i];
+	}
+
+	return _newWord+RESET;
+
+}

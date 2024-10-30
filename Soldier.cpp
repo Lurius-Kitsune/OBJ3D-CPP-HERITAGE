@@ -123,9 +123,6 @@ Weapon* Soldier::DropWeapon()
 
 string Soldier::ToString() const
 {
-
-	const string;
-	
 	return "[" + name + "] \n" +
 		GREEN + "\t[HP] " + to_string(life) + RESET + "\n" +
 		currentWeapon->ToString() ;

@@ -2,9 +2,7 @@
 #include "GameWar.h"
 int main()
 {
-    _CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF); // Detection de fuite de mémoire
-
-    locale::global(locale("fr-FR")); // UTF8
+    
     //ShapeExcercice();
 
     /// Mon jeu Thomas vs Marguerite Apocalypse
@@ -31,7 +29,7 @@ int main()
         new Weapon("Salimata", 100, 2, 10, 300)
     };
 
-    GameWar _game = GameWar("Thomas", 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 100, 2), _weapons, 1);
+    GameWar _game = GameWar(RainbowString("Thomas", 6), 100.00f, new Weapon(RED "Thomatos" RESET, 1, 1, 100, 2), _weapons, 1);
 	_game.LaunchGame();
     //delete _soldier;
     return EXIT_SUCCESS;

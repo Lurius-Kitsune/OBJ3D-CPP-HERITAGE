@@ -131,6 +131,7 @@
     <ClCompile Include="Circle.cpp" />
     <ClCompile Include="Dog.cpp" />
     <ClCompile Include="GameWar.cpp" />
+    <ClCompile Include="Macro.cpp" />
     <ClCompile Include="Rectangle.cpp" />
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="Main.cpp" />

@@ -34,6 +34,14 @@ void GameWar::LaunchGame()
 		{
 			DoAction(RandomInt(4, 0), ennemy, player);
 		}
+		else
+		{
+			SpawnEnnemy();
+		}
+		if (!ennemy)
+		{
+			SpawnEnnemy();
+		}
 	} while (player && ennemy);
 }
 
@@ -116,8 +124,10 @@ void GameWar::DoAction(const u_int& _choice, Soldier*& _soldierTurn, Soldier*& _
 			if (_soldierTurn == player)
 			{
 				int _weaponChoice = 0;
-				PlayerChoice(_soldierTurn->GetWeaponsList(), _weaponChoice, _soldierTurn->GetWeaponsSize());
+				const string* _weaponList = _soldierTurn->GetWeaponsList();
+				PlayerChoice(_weaponList, _weaponChoice, _soldierTurn->GetWeaponsSize());
 				_soldierTurn->SetCurrentWeapon(_weaponChoice);
+				delete[] _weaponList;
 			}
 			else
 			{
@@ -153,7 +163,7 @@ void GameWar::PlayerChoice(const string* _choices, int& _choiceIndex, const u_in
 			}
 			else
 			{
-				DISPLAY(_choices[_i], true);
+				DISPLAY(_choices[_i], true); // J'aurais pu mettre une ternaire
 			}
 		}
 		DISPLAY("==========================", true);

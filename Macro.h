@@ -1,13 +1,10 @@
 // File Main.h
 #pragma once
-#include <iostream>
-#include <string>   
-#include <conio.h>
 #include "ConsolMacroColor.h"
 
-using namespace std;
-
-typedef unsigned int u_int;
+//using namespace std;
+//
+//typedef unsigned int u_int;
 
 #define new new(_NORMAL_BLOCK, __FILE__, __LINE__)
 
@@ -23,4 +20,6 @@ typedef unsigned int u_int;
 
 #pragma region Forward
 // Forward
+void Config();
 #pragma endregion
+

@@ -1,6 +1,5 @@
 #pragma once
 #include "Weapon.h"
-#include "Random.h"
 class Soldier
 {
 	string name;
